@@ -1,0 +1,74 @@
+# RSA Project
+
+This project contains implementations of various RSA-related functions, unit tests for those functions, and a script to run and check the results of each function.
+
+## Project Structure
+
+- `RSA` package
+  - **`rsa.py`**: Contains the `RSA` class with all the core functions related to RSA.
+  - **`__init__.py`**: Exports the functions of the `RSA` class for easy import.
+- **`TestRSAFunctions.py`**: Contains unit tests for the functions in the `RSA` class.
+- **`RSAInference.py`**: A script to run and check the results of each function interactively.
+
+## RSA Class
+
+The `RSA` class in `rsa.py` contains the following functions:
+
+- **`is_composite(n)`**: Checks if a number `n` is composite.
+- **`test_primality(n)`**: Tests if a number `n` is prime.
+- **`test_primality_v2(n)`**: An optimized version of the primality test.
+- **`generate_primes(n)`**: Generates all prime numbers up to `n`.
+- **`generate_random_number(from_n, to_n)`**: Generates a random number between `from_n` and `to_n`.
+- **`could_be_prime(n)`**: Checks if a number `n` could be prime based on the `6k ± 1` rule.
+- **`gcd(a, b)`**: Computes the greatest common divisor of `a` and `b` recursively.
+- **`iterative_gcd(a, b)`**: Computes the greatest common divisor of `a` and `b` using an iterative approach.
+- **`EulerTotient(n)`**: Computes Euler's Totient function for `n`.
+- **`test_euler_totient(p, q)`**: Tests the Euler's Totient function for two prime numbers `p` and `q`.
+
+## `__init__.py`
+
+The `__init__.py` file exports the functions of the `RSA` class for easy import. You can import the functions directly from the package.
+
+## `TestRSAFunctions.py`
+
+The `TestRSAFunctions.py` file contains unit tests for the functions in the `RSA` class. To run the unit tests, use:
+
+```sh
+python TestRSAFunctions.py
+```
+
+## RSAInference.py
+
+The RSAInference.py script allows you to run and check the results of each function interactively. You can pass the function name and data as arguments to see the result.
+
+## Usage
+To check the available functions:
+
+```sh
+python RSAInference.py --check_available_functions
+```
+To run a specific function with data:
+
+```sh
+python RSAInference.py --function <function_name> --data <comma_separated_data>
+```
+## Example
+
+To run the ``is_composite`` function with the data ``4``:
+```sh 
+python RSAInference.py --function is_composite --data "4"
+```
+```sh 
+python RSAInference.py --function test_primality_v2 --data "1043677052928"
+```
+
+## Testing other things not just the functions
+
+Just run this:
+
+```sh
+python RSAInference.py 
+```
+Without any argments, it will show you the results of several functions like checking Average for range ``from`` to ``uper bound``
+
+It will also plot the Prime Density as ``N`` Increases
